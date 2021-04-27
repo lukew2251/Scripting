@@ -1,8 +1,6 @@
 ﻿#Luke Willis
 #Mod 12 Homework
 
-$pcap_array = @()
-
 #make path to the user desktop
 $user_path = "C:\Users\" + $env:USERNAME + "\Desktop"
 Set-Location $user_path
@@ -41,4 +39,4 @@ foreach ($line in Get-Content $file)
     $sourceIP + "," + 
     $destIP) | Out-File "alert_data.csv" -Encoding ascii -Append
 }
-Read-Host "Press Enter to exit"
+Read-Host "Processing is done. Press Enter to close the script"
